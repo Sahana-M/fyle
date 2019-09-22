@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>flask-bootstrap example</title>
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Sl no.</th>
+              <th>Bank id</th>
+              <th>Bank Name</th>
+              <th>Bank IFSC code</th>
+              <th>Bank Branch</th>
+              <th>Bank Address</th>
+              <th>Bank City</th>
+              <th>Bank District</th>
+              <th>Bank State</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for temp in passer %}
+            <tr>
+              <td padding=10>{{ "1"}}</td>
+              <td padding=10>{{ temp.bank_name}}</td>
+              <td padding=10>{{ temp.city}}</td>
+              <td padding=10>{{ temp.bank_id}}</td>
+              <td padding=10>{{ temp.ifsc}}</td>
+              <td padding=10>{{ temp.branch}}</td>
+              <td padding=10>{{ temp.address}}</td>
+              <td padding=10>{{ temp.district}}</td>
+              <td padding=10>{{ temp.state}}</td>
+           </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
